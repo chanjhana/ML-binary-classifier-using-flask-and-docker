@@ -14,3 +14,4 @@ Upload an image using the web form.
 The app will predict whether the image contains a cat or not.
 
 ## Demo video
+file:///C:/Users/Elango/Downloads/demo.mp4
