@@ -1,4 +1,5 @@
-# ML binary classification model that classifies images as cat or dog 
+# ML binary classification model using Flask and docker
+
 This project demonstrates a simple web application that predicts whether an uploaded image contains a cat or not. It uses a pretrained machine learning model (h5 format). It is deployed using Flask and containerized using docker.
 
 ## Docker Deployment
