@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #007bff;
+    --accent-hover-color: #0056b3;
+    --background-color: #f8f9fa;
+    --input-background-color: #e9ecef;
+    --border-radius: 5px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition-duration: 0.3s;
+    --container-width: 350px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: var(--container-width);
+    animation: fadeIn var(--transition-duration) ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-input {
+    display: none;
+}
+
+.custom-file-label {
+    background-color: var(--input-background-color);
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    border: 1px solid var(--input-background-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.custom-file-label:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.upload-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.upload-btn:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.loading {
+    display: none;
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 16px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
